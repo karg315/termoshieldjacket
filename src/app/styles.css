@@ -1,0 +1,244 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1A1A1A; /* Negro principal */
+  color: #FFFFFF; /* Texto blanco por defecto */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0px; /* Margen lateral en móviles */
+}
+
+/* Sección Hero */
+.hero {
+  background: linear-gradient(135deg, #064e96, #1A1A1A); /* Azul a negro */
+  color: #FFFFFF;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #47a3ff; /* Azul principal */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p.description {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #D2B48C; /* Café suave */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto; /* Mantiene la proporción */
+  max-width: 500px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Sección Características (tarjetas) */
+.features {
+  padding: 60px 20px;
+  background-color: #1A1A1A;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1E90FF; /* Azul principal */
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #2A2A2A; /* Fondo más claro para las tarjetas */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.feature-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: rgb(250, 250, 250); /* Verde como placeholder */
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* Sección Dónde Comprar */
+.buy {
+  background: linear-gradient(to right, #004386, #003b46); /* Azul a negro */
+  color: #FFFFFF;
+  padding: 60px 20px;
+}
+
+.button {
+  background-color: #32CD32; /* Verde secundario */
+  color: #1A1A1A;
+  border: none;
+  margin-top: 15px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2AB82A;
+  transform: scale(1.05);
+}
+
+/* Sección Redes Sociales */
+.social {
+  background-color: #1A1A1A;
+  padding: 60px 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #D2B48C; /* Café suave como placeholder */
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Sección de Contacto */
+.contact {
+  background: #1A1A1A;
+  padding: 60px 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.input {
+  padding: 12px;
+  border: 1px solid #1E90FF; /* Azul principal */
+  border-radius: 8px;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: #2A2A2A;
+  color: #FFFFFF;
+}
+
+.input::placeholder {
+  color: #D2B48C; /* Café suave */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  h1.title {
+    font-size: 2rem;
+  }
+
+  p.description {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero-image {
+    max-width: 400px; /* Limita el ancho máximo pero mantiene proporción */
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .feature-card {
+    max-width: 100%; /* Tarjetas ocupan todo el ancho en móviles */
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input {
+    max-width: 100%;
+  }
+
+  .button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.title {
+    font-size: 1.75rem;
+  }
+
+  p.description {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 300px; /* Ajuste para pantallas pequeñas */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
+  }
+}
